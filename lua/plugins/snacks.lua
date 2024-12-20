@@ -1,3 +1,4 @@
+-- A set of useful plugins by folke
 return {
 	"folke/snacks.nvim",
 	enabled = true,

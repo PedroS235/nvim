@@ -1,3 +1,4 @@
+-- Plugin which is useful to get hints of keymaps
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",

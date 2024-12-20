@@ -1,3 +1,4 @@
+-- Plugin which makes interaction with lazygit
 return {
 	"kdheepak/lazygit.nvim",
 	enabled = true,

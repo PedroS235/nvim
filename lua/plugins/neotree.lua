@@ -1,29 +1,5 @@
+-- Plugin to display a file tree explorer on the side
 return {
-	{
-		"nvim-tree/nvim-tree.lua",
-		enabled = false,
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-
-		config = function()
-			local opts = { noremap = true, silent = true }
-			local keymap = vim.keymap.set
-
-			keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-
-			require("nvim-tree").setup({
-				actions = {
-					open_file = {
-						quit_on_open = true,
-						window_picker = {
-							enable = false,
-						},
-					},
-				},
-			})
-		end,
-	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		enabled = true,

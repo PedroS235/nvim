@@ -1,3 +1,4 @@
+-- Plugin which makes seamless integration with tmux movement between panes
 return {
 	"christoomey/vim-tmux-navigator",
 	enabled = true,

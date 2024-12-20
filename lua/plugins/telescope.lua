@@ -1,3 +1,4 @@
+-- A fuzzy finder plugin
 return {
 	{
 		"nvim-telescope/telescope.nvim",

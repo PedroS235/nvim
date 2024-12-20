@@ -1,3 +1,4 @@
+-- Plugin to use code formatters
 return {
 	"stevearc/conform.nvim",
 	enabled = true,

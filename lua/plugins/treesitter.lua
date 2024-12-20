@@ -1,3 +1,4 @@
+-- Plugin which gives the editor extra information about how to parse the current language
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",

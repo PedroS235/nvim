@@ -1,3 +1,4 @@
+-- Plugins for markdown editing
 return {
 	-- Render markdown in Neovim
 	{
