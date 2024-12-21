@@ -3,5 +3,5 @@ return {
 	"kdheepak/lazygit.nvim",
 	enabled = true,
 	event = "VeryLazy",
-	keys = { { "<leader>lz", ":LazyGit<CR>", desc = "LazyGit" } },
+	keys = { { "<leader>lz", "<cmd>lua Snacks.lazygit.open()<CR>", desc = "LazyGit" } },
 }
