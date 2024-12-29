@@ -36,6 +36,7 @@ return {
 			html = { "prettier" },
 			javascript = { "prettier" },
 			markdown = { "prettier" },
+			yaml = { "prettier" },
 		},
 	},
 }
