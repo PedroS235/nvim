@@ -33,6 +33,7 @@ return {
 			zsh = { "shfmt" },
 			cpp = { "clang-format" },
 			c = { "clang-format" },
+			cpp = { "clang-format" },
 			html = { "prettier" },
 			javascript = { "prettier" },
 			markdown = { "prettier" },
