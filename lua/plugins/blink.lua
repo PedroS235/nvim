@@ -2,7 +2,7 @@
 return {
 	{
 		"saghen/blink.cmp",
-		version = "*",
+		version = "0.13.0",
 		enabled = true,
 		dependencies = "rafamadriz/friendly-snippets",
 
@@ -12,16 +12,18 @@ return {
 			keymap = { preset = "enter" },
 
 			appearance = {
-				use_nvim_cmp_as_default = true,
 				nerd_font_variant = "mono",
 			},
 
+			cmdline = {
+				enabled = false,
+			},
 			sources = {
 				default = { "lsp", "path", "snippets", "buffer" },
-				cmdline = {},
 			},
 
 			signature = { enabled = true },
+			fuzzy = { implementation = "prefer_rust_with_warning" },
 		},
 		opts_extend = { "sources.default" },
 	},
