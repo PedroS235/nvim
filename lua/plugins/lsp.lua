@@ -163,7 +163,7 @@ return {
 				bashls = {},
 				clangd = {},
 				gopls = {},
-				-- ts_ls = {},
+				ts_ls = {},
 
 				-- Spell
 				harper_ls = {
@@ -215,12 +215,5 @@ return {
 				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
 			},
 		},
-	},
-
-	{
-		"ray-x/lsp_signature.nvim",
-		event = "VeryLazy",
-		enabled = false,
-		opts = {},
 	},
 }
