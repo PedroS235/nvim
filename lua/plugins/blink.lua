@@ -4,7 +4,7 @@ return {
 		"saghen/blink.cmp",
 		version = "0.13.0",
 		enabled = true,
-		dependencies = "rafamadriz/friendly-snippets",
+		dependencies = { "rafamadriz/friendly-snippets", "moyiz/blink-emoji.nvim" },
 
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
@@ -19,7 +19,24 @@ return {
 				enabled = false,
 			},
 			sources = {
-				default = { "lsp", "path", "snippets", "buffer" },
+				default = { "lsp", "path", "snippets", "buffer", "emoji" },
+
+				providers = {
+					emoji = {
+						module = "blink-emoji",
+						name = "Emoji",
+						score_offset = 15, -- Tune by preference
+						opts = { insert = true }, -- Insert emoji (default) or complete its name
+						should_show_items = function()
+							return vim.tbl_contains(
+								-- Enable emoji completion only for git commits and markdown.
+								-- By default, enabled for all file-types.
+								{ "gitcommit", "markdown" },
+								vim.o.filetype
+							)
+						end,
+					},
+				},
 			},
 
 			signature = { enabled = true },
