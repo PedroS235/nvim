@@ -22,13 +22,13 @@ return {
 
 			highlight = { enable = true },
 			indent = { enable = true },
-			autotag = { enable = true },
+			-- autotag = { enable = true },
 			autopairs = { enable = true },
 		},
 	},
 	{
 		"windwp/nvim-ts-autotag",
-		enabled = false,
+		enabled = true,
 		event = "VeryLazy",
 		opts = {},
 	},
