@@ -2,12 +2,15 @@
 return {
 	"stevearc/conform.nvim",
 	enabled = true,
-	lazy = false,
+	event = {
+		"BufReadPre",
+		"BufNewFile",
+	},
 	keys = {
 		{
 			"<leader>cf",
 			function()
-				require("conform").format({ async = true, lsp_fallback = true })
+				require("conform").format({ async = true, lsp_fallback = true, timeout_ms = 500 })
 			end,
 			mode = "",
 			desc = "[C]ode [F]ormat",
@@ -16,12 +19,10 @@ return {
 	opts = {
 		notify_on_error = true,
 		format_on_save = function(bufnr)
-			-- Disable "format_on_save lsp_fallback" for languages that don't
-			-- have a well standardized coding style. You can add additional
-			-- languages here or re-enable it for the disabled ones.
 			local disable_filetypes = { c = true, cpp = true }
 			return {
 				timeout_ms = 500,
+				async = false,
 				lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
 			}
 		end,
@@ -31,13 +32,16 @@ return {
 			rust = { "rustfmt" },
 			bash = { "beautysh" },
 			sh = { "beautysh" },
-			zsh = { "shfmt" },
+			zsh = { "beautysh" },
 			cpp = { "clang-format" },
 			c = { "clang-format" },
-			html = { "prettier" },
-			javascript = { "prettier" },
 			markdown = { "prettier" },
 			yaml = { "prettier" },
+			html = { "prettier" },
+			typescript = { "prettier" },
+			javascript = { "prettier" },
+			typescriptreact = { "prettier" },
+			javascriptreact = { "prettier" },
 		},
 	},
 }
