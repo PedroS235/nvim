@@ -17,13 +17,12 @@ return {
 
 		config = function()
 			local obsidian = require("obsidian")
-			local backup_path = "~/Documents/Notes/"
 
-			if not vim.fn.isdirectory(backup_path) then
-				vim.fn.mkdir(backup_path, "p")
+			if not os.getenv("SECOND_BRAIN_VAULT") then
+				return
 			end
 
-			local vault_path = os.getenv("SECOND_BRAIN_VAULT") or backup_path
+			local vault_path = os.getenv("SECOND_BRAIN_VAULT") or ""
 
 			obsidian.setup({
 				ui = { enable = false },
