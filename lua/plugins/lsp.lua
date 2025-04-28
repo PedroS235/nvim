@@ -161,7 +161,6 @@ return {
 				marksman = {},
 				bashls = {},
 				clangd = {},
-				gopls = {},
 				ts_ls = {},
 
 				-- Spell
