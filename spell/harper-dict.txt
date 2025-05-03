@@ -22,3 +22,5 @@ everytime
 CamelCase
 Autosense
 pointcloud
+multimodal
+benchmarking
