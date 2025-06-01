@@ -42,6 +42,7 @@ return {
 			javascript = { "prettier" },
 			typescriptreact = { "prettier" },
 			javascriptreact = { "prettier" },
+			json = { "prettier" },
 		},
 	},
 }

@@ -14,7 +14,7 @@ Instructions:
 
 return {
 	"kylechui/nvim-surround",
-	enabled = true,
+	enabled = false,
 	event = "VeryLazy",
 
 	opts = {},
